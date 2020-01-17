@@ -6,7 +6,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>
-        Hexo
+        江西财经大学-网络安全协会
     </title>
     
 <link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
@@ -30,7 +30,7 @@
     </div>
     <div class="post-content">
         <blockquote>
-<p>此教程将介绍如何从一台未安装任何环境的windows电脑从零开始搭建hexo博客。</p>
+<p>此教程将介绍如何从一台未安装任何环境的windows电脑从零开始搭建hexo博客。本文持续更新，暂未完成。</p>
 </blockquote>
 <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="下载-amp-安装"><a href="#下载-amp-安装" class="headerlink" title="下载 &amp; 安装"></a>下载 &amp; 安装</h2><p><strong>事先需要下载以下安装包</strong>：</p>
 <ol>
@@ -48,7 +48,7 @@
 <h1 id="搭建hexo博客"><a href="#搭建hexo博客" class="headerlink" title="搭建hexo博客"></a>搭建hexo博客</h1><h2 id="本地搭建"><a href="#本地搭建" class="headerlink" title="本地搭建"></a>本地搭建</h2><p>建好一个文件夹后通过命令行进入文件夹：<code>cd blog</code>，接着执行<code>hexo init</code>命令即可初始化一个blog文件夹。注意执行<code>hexo init</code>命令时一定要是一个<strong>空文件夹</strong>，否则会报错。在初始化时也可能会花一点时间，耐心等待一下。</p>
 <p>完成后可能会报几个WARN，没有关系，我们可以执行<code>hexo s</code>预览一下，其中s时server的意思，和<code>hexo server</code>的效果一样。</p>
 <p><img src="https://priate.cn/blog/body_img/2020/01/15/15790871401790.jpg?x-oss-process=image/auto-orient,1/quality,q_90" alt=""></p>
-<p>这时候博客已经运行在本地了，在浏览器中访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 或者 <a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a> 即可访问。</p>
+<p>这时候博客已经运行在本地了，在浏览器中访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 或者 <a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a> 即可。</p>
 <p>此时一个hexo博客就搭建完成了。</p>
 <h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><p>创建一篇文章也很简单，在blog文件夹下使用命令：<code>hexo new 你的文章名字</code>。hexo就会自动帮你生成一篇默认的markdown文章。并且告诉了文章的位置：就在hexo文件夹-&gt;source文件夹-&gt;_post文件夹-&gt;你的文章名字.md。</p>
 <p><img src="https://priate.cn/blog/body_img/2020/01/15/15790885390946.jpg?x-oss-process=image/auto-orient,1/quality,q_90" alt=""></p>
@@ -89,9 +89,9 @@
 <p>最后我们再来修改一下<code>_config.yml</code>文件，将原来的github地址放到另外一行，同时coding也添加一行，这样我们在发布文章的时候就会同时在github和coding上同时发布了。</p>
 <p><img src="https://priate.cn/blog/body_img/2020/01/15/15790981856261.jpg?x-oss-process=image/auto-orient,1/quality,q_90" alt=""></p>
 <p>修改完成之后就全部ok了。</p>
-<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><p>现在我们可以发布文章了，首先新建一篇文章：<code>hexo new 测试文章</code>，然后可以往<code>测试文章.md</code>中添加内容。最后进行发布，发布之前我们还需要按照一个hexo插件，执行这条命令：<code>npm install hexo-deployer-git --save</code>。</p>
+<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><p>现在我们可以发布文章了，首先新建一篇文章：<code>hexo new 测试文章</code>，然后可以往<code>测试文章.md</code>中添加内容。最后进行发布，发布之前我们还需要安装一个hexo插件，执行这条命令：<code>npm install hexo-deployer-git --save</code>。</p>
 <p>安装完成后我们就可以将文章发布出去了，分别执行以下三条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. hexo clean</span><br><span class="line">2. hexo g</span><br><span class="line">3. hexo d</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>解释一下：其中clean代表清理一下原先的缓存；g代表genarate，将markdown生成为html文件以及一些其他的页面；d代表deploy，也就是把文章发布出去。这样每次新写了一篇文章我们就执行这三条命令把文章发布出去。</p>
 <p>同时在<code>hexo g</code>之后可以首先运行一下<code>hexo s</code>也就是<code>hexo server</code>在本地打开localhost:4000先预览一下。</p>
@@ -115,9 +115,9 @@
         </script> -->
     </p>
 </div>
-<input type="hidden" id="web_style" value="black">
-<input type="hidden" id="valine_appid" value="CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz">
-<input type="hidden" id="valine_appKey" value="FqiyUqbg7McKN2eG0MCewupf">
+<input type="hidden" id="web_style" value="white">
+<input type="hidden" id="valine_appid" value="4Ehv4G0lkii047BiWGXch9dw-MdYXbMMI">
+<input type="hidden" id="valine_appKey" value="0q072Ayix7fGQubQgHQRadgo">
 
 <script src="/libs/jquery.min.js"></script>
 
